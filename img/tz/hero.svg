@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 720" preserveAspectRatio="xMidYMax slice">
+<!-- Original artwork for the Persian landing page: an ancient walled village at dawn. -->
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1f3552"/>
+    <stop offset="0.38" stop-color="#4f6f93"/>
+    <stop offset="0.66" stop-color="#d9a877"/>
+    <stop offset="0.8" stop-color="#f4d29a"/>
+  </linearGradient>
+  <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#fff6d8"/>
+    <stop offset="0.25" stop-color="#ffe3a0" stop-opacity="0.95"/>
+    <stop offset="0.55" stop-color="#f7c26e" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#f7c26e" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="mtnFar" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8d9db6"/><stop offset="1" stop-color="#b9b3b0"/>
+  </linearGradient>
+  <linearGradient id="mtnNear" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#6c7f99"/><stop offset="1" stop-color="#93978f"/>
+  </linearGradient>
+  <linearGradient id="hillBack" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8ea25a"/><stop offset="1" stop-color="#6f8645"/>
+  </linearGradient>
+  <linearGradient id="hillMid" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7d9a45"/><stop offset="1" stop-color="#57732f"/>
+  </linearGradient>
+  <linearGradient id="hillFront" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4f6b2b"/><stop offset="1" stop-color="#2f4519"/>
+  </linearGradient>
+  <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#e2cfa6"/><stop offset="1" stop-color="#b69a6a"/>
+  </linearGradient>
+  <linearGradient id="stoneDark" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c9ad7b"/><stop offset="1" stop-color="#9c8055"/>
+  </linearGradient>
+  <linearGradient id="dome" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#5fc1b8"/><stop offset="1" stop-color="#1f6f73"/>
+  </linearGradient>
+  <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#e6cf98"/><stop offset="1" stop-color="#c9a764"/>
+  </linearGradient>
+  <pattern id="crenel" width="16" height="10" patternUnits="userSpaceOnUse">
+    <rect width="10" height="10" fill="#d8c294"/>
+  </pattern>
+  <pattern id="wheat" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)">
+    <rect width="14" height="14" fill="#d9b54f"/>
+    <rect width="14" height="5" fill="#c79d3b"/>
+  </pattern>
+  <pattern id="crops" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(12)">
+    <rect width="12" height="12" fill="#8cab4b"/>
+    <rect width="12" height="4" fill="#769539"/>
+  </pattern>
+
+  <!-- building blocks -->
+  <g id="house">
+    <rect x="-14" y="-16" width="28" height="18" fill="#efe0bd"/>
+    <rect x="0" y="-16" width="14" height="18" fill="#d6c094"/>
+    <path d="M-17 -15 L0 -31 L17 -15 Z" fill="#b5532e"/>
+    <path d="M0 -31 L17 -15 L0 -15 Z" fill="#8f3c20"/>
+    <rect x="-8" y="-9" width="5" height="11" fill="#6b4a2b"/>
+    <rect x="5" y="-11" width="4" height="4" fill="#6b4a2b"/>
+  </g>
+  <g id="hut">
+    <rect x="-12" y="-12" width="24" height="14" fill="#e8d6ad"/>
+    <rect x="1" y="-12" width="11" height="14" fill="#cdb585"/>
+    <path d="M-16 -11 Q0 -32 16 -11 Z" fill="#c9a24e"/>
+    <path d="M0 -26 Q10 -20 16 -11 L0 -11 Z" fill="#a8822f"/>
+    <rect x="-5" y="-7" width="5" height="9" fill="#6b4a2b"/>
+  </g>
+  <g id="tower">
+    <rect x="-16" y="-80" width="32" height="82" fill="url(#stone)"/>
+    <rect x="2" y="-80" width="14" height="82" fill="#b39566" opacity="0.7"/>
+    <rect x="-19" y="-88" width="38" height="10" fill="#d8c294"/>
+    <rect x="-19" y="-96" width="8" height="8" fill="#d8c294"/>
+    <rect x="-4" y="-96" width="8" height="8" fill="#d8c294"/>
+    <rect x="11" y="-96" width="8" height="8" fill="#c7ae7e"/>
+    <rect x="-4" y="-60" width="6" height="12" rx="3" fill="#4a3522"/>
+  </g>
+  <g id="flag">
+    <rect x="-1.5" y="-46" width="3" height="46" fill="#5a4129"/>
+    <path d="M1.5 -46 Q14 -50 24 -44 Q34 -38 44 -42 L44 -26 Q34 -22 24 -28 Q14 -34 1.5 -30 Z" fill="#b3261e"/>
+    <path d="M1.5 -40 Q14 -44 24 -38 Q34 -32 44 -36 L44 -33 Q34 -29 24 -35 Q14 -41 1.5 -37 Z" fill="#f0c24b"/>
+  </g>
+  <g id="tree">
+    <rect x="-3" y="-14" width="6" height="16" fill="#5b3f24"/>
+    <circle cx="0" cy="-26" r="17" fill="#3f6a2a"/>
+    <circle cx="-8" cy="-20" r="11" fill="#4c7a31"/>
+    <circle cx="6" cy="-32" r="9" fill="#5c8c3a"/>
+  </g>
+  <g id="cypress">
+    <rect x="-2" y="-8" width="4" height="10" fill="#4e3620"/>
+    <path d="M0 -70 C10 -50 12 -20 6 -6 L-6 -6 C-12 -20 -10 -50 0 -70 Z" fill="#2f5426"/>
+    <path d="M0 -70 C10 -50 12 -20 6 -6 L0 -6 Z" fill="#244520"/>
+  </g>
+  <g id="sheep">
+    <ellipse cx="0" cy="-5" rx="7" ry="5" fill="#f6f1e4"/>
+    <circle cx="7" cy="-7" r="3" fill="#3b3229"/>
+  </g>
+</defs>
+
+<!-- sky and light -->
+<rect width="1600" height="720" fill="url(#sky)"/>
+<circle cx="560" cy="360" r="230" fill="url(#sun)"/>
+<circle cx="560" cy="360" r="46" fill="#fff4cf" opacity="0.9"/>
+
+<!-- clouds -->
+<g fill="#ffffff" opacity="0.55">
+  <ellipse cx="220" cy="150" rx="120" ry="20"/><ellipse cx="280" cy="136" rx="70" ry="22"/>
+  <ellipse cx="1080" cy="110" rx="150" ry="18"/><ellipse cx="1150" cy="96" rx="80" ry="20"/>
+  <ellipse cx="1420" cy="210" rx="110" ry="14"/>
+</g>
+<g fill="#ffe6bd" opacity="0.5">
+  <ellipse cx="760" cy="250" rx="140" ry="10"/><ellipse cx="360" cy="270" rx="100" ry="8"/>
+</g>
+
+<!-- birds -->
+<g fill="none" stroke="#2a3646" stroke-width="2.4" stroke-linecap="round" opacity="0.7">
+  <path d="M900 190 q8 -8 16 0 q8 -8 16 0"/>
+  <path d="M940 214 q6 -6 12 0 q6 -6 12 0"/>
+  <path d="M870 226 q5 -5 10 0 q5 -5 10 0"/>
+</g>
+
+<!-- mountains -->
+<path d="M0 420 L90 330 L150 372 L260 262 L340 340 L420 300 L520 380 L640 300 L720 350 L820 250 L930 352 L1010 300 L1120 360 L1240 246 L1330 330 L1420 292 L1520 352 L1600 310 L1600 470 L0 470 Z" fill="url(#mtnFar)" opacity="0.85"/>
+<g fill="#f3f0ea" opacity="0.85">
+  <path d="M260 262 L290 292 L274 288 L260 300 L246 290 L232 290 Z"/>
+  <path d="M820 250 L850 280 L834 276 L820 288 L806 278 L792 278 Z"/>
+  <path d="M1240 246 L1272 278 L1255 274 L1240 286 L1226 276 L1210 276 Z"/>
+</g>
+<path d="M0 450 L120 380 L210 420 L330 350 L450 430 L560 410 L700 440 L830 360 L960 430 L1080 380 L1200 420 L1330 350 L1460 420 L1600 380 L1600 500 L0 500 Z" fill="url(#mtnNear)" opacity="0.75"/>
+
+<!-- back hills -->
+<path d="M0 480 Q200 430 420 460 Q620 420 820 455 Q1050 420 1250 450 Q1450 425 1600 445 L1600 560 L0 560 Z" fill="url(#hillBack)"/>
+<!-- distant fields on back hills -->
+<path d="M1040 452 Q1120 440 1200 452 L1190 470 Q1110 462 1030 472 Z" fill="url(#wheat)" opacity="0.8"/>
+<path d="M1260 456 Q1340 446 1420 452 L1416 470 Q1340 466 1258 474 Z" fill="url(#crops)" opacity="0.8"/>
+<g transform="translate(1110 452) scale(0.55)"><use xlink:href="#hut"/></g>
+<g transform="translate(1350 452) scale(0.55)"><use xlink:href="#hut"/></g>
+<g transform="translate(1480 448) scale(0.5)"><use xlink:href="#tree"/></g>
+<g transform="translate(980 448) scale(0.5)"><use xlink:href="#tree"/></g>
+
+<!-- ground base -->
+<rect x="0" y="540" width="1600" height="180" fill="#5f7c33"/>
+
+<!-- village hill -->
+<path d="M150 600 Q260 500 400 478 Q560 452 720 476 Q860 498 980 590 L980 640 L150 640 Z" fill="url(#hillMid)"/>
+
+<!-- ===== the walled village ===== -->
+<!-- back wall -->
+<rect x="350" y="430" width="420" height="34" fill="url(#stoneDark)"/>
+<rect x="350" y="420" width="420" height="10" fill="url(#crenel)"/>
+
+<!-- citadel: palace with turquoise dome -->
+<g>
+  <rect x="490" y="330" width="140" height="110" fill="url(#stone)"/>
+  <rect x="560" y="330" width="70" height="110" fill="#b89b6c" opacity="0.55"/>
+  <rect x="482" y="322" width="156" height="12" fill="#d8c294"/>
+  <!-- iwan arch -->
+  <path d="M538 440 L538 384 Q560 352 582 384 L582 440 Z" fill="#3c2d1f"/>
+  <path d="M532 440 L532 382 Q560 344 588 382 L588 440" fill="none" stroke="#2c7c7c" stroke-width="5"/>
+  <rect x="500" y="352" width="18" height="26" rx="9" fill="#4a3522"/>
+  <rect x="602" y="352" width="18" height="26" rx="9" fill="#4a3522"/>
+  <!-- drum and dome -->
+  <rect x="520" y="300" width="80" height="24" fill="#e7d6b0"/>
+  <path d="M516 302 Q516 230 560 214 Q604 230 604 302 Z" fill="url(#dome)"/>
+  <path d="M560 214 Q590 236 596 300 L604 302 Q604 230 560 214 Z" fill="#17575a" opacity="0.6"/>
+  <path d="M530 270 Q560 258 590 270" fill="none" stroke="#f0c24b" stroke-width="2.5" opacity="0.9"/>
+  <rect x="558" y="194" width="4" height="22" fill="#f0c24b"/>
+  <circle cx="560" cy="192" r="5" fill="#f0c24b"/>
+  <!-- minaret-like corner towers -->
+  <rect x="470" y="300" width="20" height="140" fill="#e2cfa6"/>
+  <path d="M466 302 L480 272 L494 302 Z" fill="#2c7c7c"/>
+  <rect x="630" y="300" width="20" height="140" fill="#c4a876"/>
+  <path d="M626 302 L640 272 L654 302 Z" fill="#1f6f73"/>
+</g>
+<g transform="translate(480 272)"><use xlink:href="#flag"/></g>
+
+<!-- houses inside walls -->
+<g transform="translate(400 432)"><use xlink:href="#house"/></g>
+<g transform="translate(440 440)"><use xlink:href="#hut"/></g>
+<g transform="translate(680 436)"><use xlink:href="#house"/></g>
+<g transform="translate(722 442)"><use xlink:href="#hut"/></g>
+<g transform="translate(375 446) scale(0.8)"><use xlink:href="#cypress"/></g>
+<g transform="translate(752 444) scale(0.8)"><use xlink:href="#cypress"/></g>
+
+<!-- front wall -->
+<path d="M300 520 L300 478 Q560 452 820 478 L820 520 Q560 494 300 520 Z" fill="url(#stone)"/>
+<path d="M300 478 Q560 452 820 478 L820 484 Q560 458 300 484 Z" fill="#c7ae7e"/>
+<g fill="#d8c294">
+  <rect x="310" y="466" width="12" height="12"/><rect x="340" y="463" width="12" height="12"/>
+  <rect x="370" y="460" width="12" height="12"/><rect x="400" y="458" width="12" height="12"/>
+  <rect x="430" y="456" width="12" height="12"/><rect x="460" y="454" width="12" height="12"/>
+  <rect x="490" y="452" width="12" height="12"/>
+  <rect x="618" y="452" width="12" height="12"/><rect x="648" y="454" width="12" height="12"/>
+  <rect x="678" y="456" width="12" height="12"/><rect x="708" y="458" width="12" height="12"/>
+  <rect x="738" y="460" width="12" height="12"/><rect x="768" y="463" width="12" height="12"/>
+  <rect x="798" y="466" width="12" height="12"/>
+</g>
+<g stroke="#a88d5e" stroke-width="1.2" opacity="0.6">
+  <path d="M310 500 Q560 474 810 500" fill="none"/>
+  <path d="M310 510 Q560 484 810 510" fill="none"/>
+</g>
+
+<!-- wall towers -->
+<g transform="translate(300 522)"><use xlink:href="#tower"/></g>
+<g transform="translate(820 522)"><use xlink:href="#tower"/></g>
+<g transform="translate(300 426)"><use xlink:href="#flag"/></g>
+<g transform="translate(820 426)"><use xlink:href="#flag"/></g>
+
+<!-- gatehouse -->
+<g>
+  <rect x="510" y="430" width="100" height="72" fill="url(#stone)"/>
+  <rect x="560" y="430" width="50" height="72" fill="#b39566" opacity="0.6"/>
+  <rect x="504" y="422" width="112" height="10" fill="#d8c294"/>
+  <rect x="504" y="412" width="12" height="10" fill="#d8c294"/><rect x="532" y="412" width="12" height="10" fill="#d8c294"/>
+  <rect x="576" y="412" width="12" height="10" fill="#d8c294"/><rect x="604" y="412" width="12" height="10" fill="#c7ae7e"/>
+  <path d="M536 502 L536 466 Q560 436 584 466 L584 502 Z" fill="#3b2a1b"/>
+  <g stroke="#6b5033" stroke-width="2">
+    <path d="M544 502 L544 456"/><path d="M552 502 L552 448"/><path d="M560 502 L560 446"/>
+    <path d="M568 502 L568 448"/><path d="M576 502 L576 456"/>
+  </g>
+</g>
+
+<!-- road from the gate -->
+<path d="M540 502 L580 502 Q610 560 700 620 Q760 660 820 720 L640 720 Q620 660 580 610 Q548 568 540 502 Z" fill="url(#road)"/>
+
+<!-- side fields and trees -->
+<path d="M150 600 Q230 540 330 530 L360 570 Q260 590 190 640 Z" fill="url(#wheat)"/>
+<path d="M860 540 Q930 560 985 600 L960 640 Q900 600 820 578 Z" fill="url(#crops)"/>
+<g transform="translate(250 560)"><use xlink:href="#tree"/></g>
+<g transform="translate(900 560)"><use xlink:href="#tree"/></g>
+<g transform="translate(205 590) scale(1.1)"><use xlink:href="#cypress"/></g>
+<g transform="translate(950 590) scale(1.1)"><use xlink:href="#cypress"/></g>
+
+<!-- right hills: farmland and outposts -->
+<path d="M900 640 Q1100 500 1320 520 Q1480 530 1600 500 L1600 720 L900 720 Z" fill="url(#hillMid)"/>
+<path d="M1060 560 Q1160 520 1260 528 L1280 570 Q1170 566 1080 600 Z" fill="url(#wheat)"/>
+<path d="M1300 530 Q1420 524 1540 512 L1560 552 Q1430 566 1310 572 Z" fill="url(#crops)"/>
+<g transform="translate(1200 560)"><use xlink:href="#house"/></g>
+<g transform="translate(1236 566)"><use xlink:href="#hut"/></g>
+<g transform="translate(1420 548)"><use xlink:href="#hut"/></g>
+<g transform="translate(1520 560)"><use xlink:href="#tree"/></g>
+<g transform="translate(1110 596)"><use xlink:href="#tree"/></g>
+<g transform="translate(1340 600) scale(0.9)"><use xlink:href="#cypress"/></g>
+<g transform="translate(1365 604) scale(0.75)"><use xlink:href="#cypress"/></g>
+<!-- watchtower on the far right -->
+<g transform="translate(1470 548) scale(0.7)"><use xlink:href="#tower"/></g>
+<g transform="translate(1470 482) scale(0.7)"><use xlink:href="#flag"/></g>
+
+<!-- sheep on the meadow -->
+<g transform="translate(980 650)"><use xlink:href="#sheep"/></g>
+<g transform="translate(1000 660)"><use xlink:href="#sheep"/></g>
+<g transform="translate(1020 648)"><use xlink:href="#sheep"/></g>
+<g transform="translate(360 620)"><use xlink:href="#sheep"/></g>
+<g transform="translate(382 630)"><use xlink:href="#sheep"/></g>
+
+<!-- left hills -->
+<path d="M0 520 Q120 500 220 560 Q280 610 300 720 L0 720 Z" fill="url(#hillMid)"/>
+<g transform="translate(60 540)"><use xlink:href="#tree"/></g>
+<g transform="translate(120 560) scale(1.1)"><use xlink:href="#cypress"/></g>
+<g transform="translate(100 556)"><use xlink:href="#house"/></g>
+
+<!-- foreground -->
+<path d="M0 640 Q200 600 420 660 Q520 690 600 720 L0 720 Z" fill="url(#hillFront)"/>
+<path d="M860 720 Q1000 640 1220 650 Q1420 660 1600 620 L1600 720 Z" fill="url(#hillFront)"/>
+<g transform="translate(40 690) scale(1.5)"><use xlink:href="#tree"/></g>
+<g transform="translate(1560 680) scale(1.6)"><use xlink:href="#tree"/></g>
+<g transform="translate(1500 700) scale(1.4)"><use xlink:href="#cypress"/></g>
+<g transform="translate(130 712) scale(1.3)"><use xlink:href="#cypress"/></g>
+</svg>
