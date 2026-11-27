@@ -1965,32 +1965,6 @@ $lang['index'][0][15] = 'FAQ';
 $lang['index'][0][16] = 'Screenshots';
 $lang['forum'] = 'Forum';
 $lang['register'] = 'Register';
-
-// Modern landing page (Templates/landing.tpl)
-$lang['landing'] = [
-    'skip' => 'Skip to main content',
-    'menu' => 'Main menu',
-    'art_alt' => 'An ancient walled village with a domed citadel at sunrise',
-    'kicker' => 'Online strategy game · Free · No download',
-    'title' => 'Build your empire from a single village',
-    'lead' => 'Gather resources, grow your village, raise an army and rule the ancient lands together with your allies.',
-    'cta' => 'Play for free',
-    'have_account' => 'I have an account',
-    'features' => [
-        ['Build and grow', 'Gather resources, upgrade your buildings and turn a small village into a thriving city.'],
-        ['Armies and battle', 'Train troops, defend your village and march on the lands around you.'],
-        ['Alliances and diplomacy', 'Make pacts with other players, found an alliance and fight for victory together.'],
-        ['Trade and market', 'Exchange surplus resources and build busy trade routes with your merchants.'],
-    ],
-    'steps_title' => 'Start in three steps',
-    'steps' => [
-        ['Sign up', 'Choose a name and password. It takes less than a minute.'],
-        ['Pick your tribe', 'Every tribe has its own strengths and style of play.'],
-        ['Build your village', 'Raise your first buildings and start your road to victory.'],
-    ],
-    'final_title' => 'The lands of '.SERVER_NAME.' are waiting',
-    'final_text' => 'Sign up now and found your own village alongside other players.',
-];
 $lang['login'] = 'Login';
 $lang['screenshots']['title1'] = 'Village';
 $lang['screenshots']['desc1'] = 'Village building';
