@@ -1,0 +1,91 @@
+/* Persian / right-to-left support. Loaded only when the page language is RTL
+   (see GameEngine/Lang/i18n_head.php). */
+
+@font-face {
+	font-family: 'Vazirmatn';
+	src: url('fonts/vazirmatn/Vazirmatn-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Vazirmatn';
+	src: url('fonts/vazirmatn/Vazirmatn-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+html.tz-rtl body,
+html.tz-rtl input,
+html.tz-rtl button,
+html.tz-rtl select,
+html.tz-rtl textarea,
+html.tz-rtl table,
+html.tz-rtl h1, html.tz-rtl h2, html.tz-rtl h3,
+html.tz-rtl h4, html.tz-rtl h5, html.tz-rtl h6 {
+	font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+}
+
+/* ---- Landing / content pages (index.php, rules, FAQ): whole page is RTL ---- */
+html.tz-landing.tz-rtl body {
+	direction: rtl;
+	text-align: right;
+}
+
+/* ---- In-game pages: the classic frame stays put, text areas read RTL ---- */
+html.tz-game.tz-rtl #content,
+html.tz-game.tz-rtl #side_navi,
+html.tz-game.tz-rtl #side_info,
+html.tz-game.tz-rtl #footer,
+html.tz-game.tz-rtl .popup,
+html.tz-game.tz-rtl #qstd,
+html.tz-game.tz-rtl #anm {
+	direction: rtl;
+	text-align: right;
+}
+/* Numbers, coordinates and timers stay left-to-right inside RTL text. */
+html.tz-rtl .coords, html.tz-rtl .coordinates, html.tz-rtl span[id^="timer"],
+html.tz-rtl .timer, html.tz-rtl #ltime b {
+	direction: ltr;
+	unicode-bidi: embed;
+}
+
+/* Graphic maps keep their left-to-right geometry. */
+html.tz-game.tz-rtl #content #map,
+html.tz-game.tz-rtl #content #village_map,
+html.tz-game.tz-rtl #content #map_content {
+	direction: ltr;
+}
+
+/* Headings drawn as English script images: show the translated text instead. */
+html.tz-rtl #content h1 img.img_login,
+html.tz-rtl #content h1 img.anmelden,
+html.tz-rtl #content h5 img.img_u04,
+html.tz-rtl #content h5 img.img_u05 { display: none; }
+html.tz-rtl #content h1 .tz-img-text,
+html.tz-rtl #content h5 .tz-img-text { display: inline; }
+html.tz-rtl #content h1 .tz-img-text { font-size: 26px; line-height: 1.6; }
+html.tz-rtl #content h5 .tz-img-text { font-size: 15px; color: #71d000; }
+
+/* Menu sits right next to the content when it is right-aligned. */
+@media (min-width: 980px) {
+	html.tz-game.tz-rtl #side_navi { padding-right: 12px; box-sizing: border-box; }
+}
+
+/* Landing popups: close button on the left so it does not cover the RTL title. */
+html.tz-landing.tz-rtl .overlay_content .closer img { right: auto; left: 15px; }
+html.tz-landing.tz-rtl .overlay_content h2 { padding-left: 50px; }
+
+/* Landing boxes whose artwork is drawn for left-to-right: keep the box
+   geometry LTR and only the text inside RTL. */
+html.tz-landing.tz-rtl #player_counter { direction: ltr; left: -24px; }
+html.tz-landing.tz-rtl #player_counter table { direction: rtl; text-align: right; }
+html.tz-landing.tz-rtl #newsbox .news { padding-left: 0; padding-right: 15px; width: 382px; }
+html.tz-landing.tz-rtl #newsbox .news p { padding-right: 0; padding-left: 30px; }
+html.tz-landing.tz-rtl #screenshots_preview { direction: ltr; }
+html.tz-landing.tz-rtl #newsbox h2 { box-sizing: border-box; width: 397px; }
+@media (max-width: 860px) {
+	html.tz-landing.tz-rtl #player_counter { left: 0; }
+	html.tz-landing.tz-rtl #newsbox h2, html.tz-landing.tz-rtl #newsbox .news { width: auto; }
+}

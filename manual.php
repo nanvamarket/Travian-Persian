@@ -42,6 +42,7 @@ tz_load_language(LANG);
 	<link href="<?php echo GP_LOCATE; ?>lang/en/lang.css?f4b7d" rel="stylesheet" type="text/css" />
 	<link href="<?php echo GP_LOCATE; ?>travian.css?f4b7d" rel="stylesheet" type="text/css" />
 		<link href="<?php echo GP_LOCATE; ?>lang/en/lang.css" rel="stylesheet" type="text/css" />
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'game'); ?>
 	   </head>
 	<body class="manual">
 <?php

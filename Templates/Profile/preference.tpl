@@ -196,7 +196,7 @@ if (isset($_POST['v1']) || isset($_POST['v2']) || isset($_POST['timezone']) || i
 $lang = LANG;
 if(isset($_POST['lang']))
 {
-    $allowedLangs = ['en','fr','it','ro','zh'];
+    $allowedLangs = ['en','fr','it','ro','zh','fa'];
     $selectedLang = strtolower(trim($_POST['lang']));
     if(in_array($selectedLang, $allowedLangs))
     {
@@ -526,6 +526,9 @@ if(isset($_POST['lang']))
             </option>
             <option value="zh" <?php if($session->userinfo['lang']=="zh") echo 'selected'; ?>>
                 <?php echo TZ_CHINESE; ?>
+            </option>
+            <option value="fa" <?php if($session->userinfo['lang']=="fa") echo 'selected'; ?>>
+                <?php echo TZ_PERSIAN; ?>
             </option>
             <option value="fr" <?php if($session->userinfo['lang']=="fr") echo 'selected'; ?>>
                 <?php echo TZ_FRENCH; ?>

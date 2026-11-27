@@ -74,6 +74,7 @@ AccessLogger::logRequest();
 		div.c2 {left:237px;}
 		ul.c1 {position:absolute; left:0px; width: 686px;}
 	</style>
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'landing'); ?>
 </head>
 
 <body class="presto indexPage">

@@ -359,6 +359,7 @@ if(isset($_GET['mode']) && $_GET['mode'] == 'troops' && isset($_GET['cancel']) &
 
 		window.addEvent('domready', start);
 	</script>
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'game'); ?>
 </head>
 
 
@@ -442,7 +443,7 @@ include("Templates/res.tpl");
 echo round(($generator->pageLoadTimeEnd()-$pagestart)*1000);
 ?></b> ms
 
-<br />Server time: <span id="tp1" class="b"><?php echo date('H:i:s'); ?></span>
+<br /><?php echo defined('SERVER_TIME') ? SERVER_TIME : 'Server time:'; ?> <span id="tp1" class="b"><?php echo date('H:i:s'); ?></span>
 </div>
 	</div>
 </div>

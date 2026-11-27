@@ -188,6 +188,7 @@ if(isset($_GET['aid']) || isset($_GET['fid']) || isset($_GET['fid2']) ||
 					layer.innerHTML = desc_string;
 				}
 	</script>
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'game'); ?>
 </head>
 
 

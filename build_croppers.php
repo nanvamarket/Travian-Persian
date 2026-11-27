@@ -233,6 +233,7 @@ $worldLabel = worldSizeLabel();
         @media (max-width: 900px){ .cb-grid{ grid-template-columns:1fr; } }
         pre#log { margin-top:14px; }
     </style>
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'game'); ?>
 </head>
 
 <body class="v35 ie ie8">
