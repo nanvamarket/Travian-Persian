@@ -94,7 +94,6 @@ AccessLogger::logRequest();
 				<tr>
 					<td><a href="tutorial.php"><span><?php echo TUTORIAL; ?></span></a></td>
 					<td><a href="anleitung.php"><span><?php echo $lang['index'][0][2]; ?></span></a></td>
-					<td><a href="https://github.com/Shadowss/TravianZ/discussions" target="_blank"><span><?php echo FORUM; ?></span></a></td>
 					<td><a href="?signup" class="signup_link mark"><span><?php echo $lang['register']; ?></span></a></td>
 					<td><a href="?login" class="login_link"><span><?php echo LOGIN; ?></span></a></td>
 				</tr>
@@ -222,7 +221,7 @@ AccessLogger::logRequest();
 			<h2><?php echo CHOOSE; ?></h2>
 			<a href="#" class="closer"><img class="dynamic_img" alt="Close" src="img/un/x.gif" /></a>
 			<ul class="world_list">
-				<li class="w_big c3" style="background-image:url('img/en/welten/en1_big.jpg');">
+				<li class="w_big c3" style="background-image:url('img/en/welten/en1_big.webp');">
 					<a href="login.php"><img class="w_button" src="img/un/x.gif" alt="World" title="<?php echo $users; echo "&nbsp;"; echo PLAYERS; echo "&nbsp;|&nbsp;"; echo $active; echo "&nbsp;"; echo ACTIVE; echo "&nbsp;|&nbsp;"; echo $online; echo "&nbsp;"; echo ONLINE; ?>" /></a>
 					<div class="label_players c0"><?php echo PLAYERS; ?>:</div>
 					<div class="label_online c0"><?php echo ONLINE; ?>:</div>
@@ -239,7 +238,7 @@ AccessLogger::logRequest();
 			<h2><?php echo CHOOSE; ?></h2>
 			<a href="#" class="closer"><img class="dynamic_img" alt="Close" src="img/un/x.gif" /></a>
 			<ul class="world_list">
-				<li class="w_big c4" style="background-image:url('img/en/welten/en1_big.jpg');">
+				<li class="w_big c4" style="background-image:url('img/en/welten/en1_big.webp');">
 					<a href="anmelden.php"><img class="w_button" src="img/un/x.gif" alt="World" title="<?php echo $users; echo "&nbsp;"; echo PLAYERS; echo "&nbsp;|&nbsp;"; echo $active; echo "&nbsp;"; echo ACTIVE; echo "&nbsp;|&nbsp;"; echo $online; echo "&nbsp;"; echo ONLINE; ?>" /></a>
 					<div class="label_players c0"><?php echo PLAYERS; ?>:</div>
 					<div class="label_online c0"><?php echo ONLINE; ?>:</div>

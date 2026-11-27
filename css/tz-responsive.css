@@ -338,3 +338,62 @@
 /* Text replacements for headings drawn as English images (login/register).
    Hidden by default; css/tz-rtl.css shows them instead of the image. */
 .tz-img-text { display: none; }
+
+/* -------------------------------------------------------------------
+   Landing header artwork: the Persian server's own image
+   (upload it to gpack/travian/images/artwork-ltr.webp).
+   Phones and tablets crop it with the rules above (background-size: cover).
+   ------------------------------------------------------------------- */
+html.tz-landing body.indexPage #header,
+html.tz-landing body.indexpage #header {
+	background-image: url("../gpack/travian/images/artwork-ltr.webp");
+}
+@media (min-width: 861px) {
+	html.tz-landing body.indexPage #header,
+	html.tz-landing body.indexpage #header { background-size: auto 389px; }
+}
+
+/* Persian server's own artwork for the landing boxes (uploaded as .webp). */
+html.tz-landing #player_counter {
+	background-image: url("../gpack/travian/images/count_background-ltr.webp");
+}
+html.tz-landing .grit #screenshots {
+	background-image: url("../gpack/travian/images/screenshots_background.webp");
+}
+
+/* Desktop: line the menu and the «register» sign up with the new header art
+   (cream bar at x 605-1118 / y 22-68, signpost board at x 400-665 / y 245-320
+   of the 1332x389 image). */
+@media (min-width: 861px) {
+	html.tz-landing body.indexPage #navigation table.menu {
+		right: auto; left: 395px; top: -16px; width: 470px;
+	}
+	html.tz-landing body.indexPage #navigation a.home {
+		left: -50px; top: -48px; width: 430px; height: 100px;
+	}
+	html.tz-landing body.indexPage #register_now {
+		margin-left: -206px; top: 258px;
+	}
+}
+
+/* Phones and tablets: menu as a strip above the art so the ribbon stays
+   readable, and the «register» text sits on the signpost board.
+   --h is the art height; the 1332x389 image is scaled to it (cover). */
+@media (max-width: 860px) {
+	html.tz-landing body.indexPage { --h: max(200px, 29.2vw); }
+	html.tz-landing body.indexPage .wrapper { padding-top: 44px; }
+	html.tz-landing body.indexPage #header {
+		height: var(--h) !important;
+		background-position: 0 0 !important;
+	}
+	html.tz-landing body.indexPage #navigation { top: 6px !important; }
+	html.tz-landing body.indexPage #register_now {
+		top: calc(44px + var(--h) * 0.66) !important;
+		left: calc(var(--h) * 1.07) !important;
+		margin-left: 0 !important;
+		width: calc(var(--h) * 0.6) !important;
+		background: none !important;
+		border: 0 !important;
+		padding: 0 !important;
+	}
+}
