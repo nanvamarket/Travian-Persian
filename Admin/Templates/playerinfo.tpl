@@ -172,6 +172,7 @@
 					'en' => 'English',
 					'ro' => 'Romanian',
 					'zh' => 'Chinese',
+					'fa' => 'Persian',
 					'fr' => 'French',
 					'it' => 'Italian',
 					];

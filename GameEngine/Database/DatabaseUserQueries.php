@@ -58,7 +58,7 @@ trait DatabaseUserQueries {
         ? strtolower(trim((string) SERVER_LANG))
         : 'en';
 
-    $allowedLanguages = ['en', 'es', 'fr', 'it', 'ro', 'zh'];
+    $allowedLanguages = ['en', 'es', 'fr', 'it', 'ro', 'zh', 'fa'];
 
     if (!in_array($serverLang, $allowedLanguages, true)) {
         $serverLang = 'en';

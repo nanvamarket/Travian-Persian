@@ -51,6 +51,10 @@ function run_language_case($language)
             'welcome' => '欢迎来到 Test Server',
             'fallback' => ['TRIBE7', 'Egyptians'],
         ],
+        'fa' => [
+            'tribe' => 'رومی‌ها',
+            'welcome' => 'به Test Server خوش آمدید',
+        ],
     ];
 
     if (!isset($expected[$language])) {
@@ -135,7 +139,7 @@ if (isset($argv[1])) {
     exit(0);
 }
 
-$languages = ['en', 'es', 'fr', 'it', 'ro', 'zh'];
+$languages = ['en', 'es', 'fr', 'it', 'ro', 'zh', 'fa'];
 foreach ($languages as $language) {
     $pipes = [];
     $process = proc_open(
@@ -166,4 +170,4 @@ foreach ($languages as $language) {
     echo $stdout;
 }
 
-echo "PASS language loader: 6 locales\n";
+echo "PASS language loader: 7 locales\n";
