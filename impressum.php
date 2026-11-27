@@ -86,6 +86,7 @@ AccessLogger::logRequest();
 
     </style>
 
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'landing'); ?>
 </head>
 
 <body class="webkit contentPage">

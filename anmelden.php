@@ -284,6 +284,7 @@ ul.rw-err{margin:0 0 6px;padding:0 0 0 16px;color:#c0392b;font:bold 12px/17px Ar
 .rw-back:hover{text-decoration:underline}
 .rw-foot{margin:2px 0 0;text-align:center;font:11px Arial;color:#8a7a63}
 </style>
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'game'); ?>
 	   </head>
 
 <body class="v35 ie ie7" onload="initCounter()">
@@ -297,7 +298,7 @@ ul.rw-err{margin:0 0 6px;padding:0 0 0 16px;color:#c0392b;font:bold 12px/17px Ar
 if(REG_OPEN == true){ ?>
 <div id="content"  class="signup">
 
-<h1><img src="img/x.gif" class="anmelden" alt="register for the game" /></h1>
+<h1><img src="img/x.gif" class="anmelden" alt="register for the game" /><span class="tz-img-text"><?php echo REG; ?></span></h1>
 
 <form name="snd" method="post" action="anmelden.php" id="regform">
 <input type="hidden" name="invited" value="<?php echo htmlspecialchars($invited, ENT_QUOTES, 'UTF-8'); ?>" />
@@ -535,8 +536,8 @@ echo $form->getError('agree');
 <?php }else{ ?>
 <div id="content"  class="signup">
 
-<h1><img src="img/x.gif" class="anmelden" alt="register for the game" /></h1>
-<h5><img src="img/x.gif" class="img_u05" alt="registration"/></h5>
+<h1><img src="img/x.gif" class="anmelden" alt="register for the game" /><span class="tz-img-text"><?php echo REG; ?></span></h1>
+<h5><img src="img/x.gif" class="img_u05" alt="registration"/><span class="tz-img-text"><?php echo REG; ?></span></h5>
 
 <p><?php echo REGISTER_CLOSED; ?></p>
 </div>

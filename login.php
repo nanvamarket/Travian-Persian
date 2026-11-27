@@ -64,6 +64,7 @@ $_SESSION[ 'csrf' ] = $key;
 	<link href="<?php echo GP_LOCATE; ?>lang/en/lang.css?f4b7d" rel="stylesheet" type="text/css" />
 	<link href="<?php echo GP_LOCATE ?>travian.css?f4b7d" rel="stylesheet" type="text/css" />
 		<link href="<?php echo GP_LOCATE ?>lang/en/lang.css" rel="stylesheet" type="text/css" />
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'game'); ?>
 	   </head>
 
 <body class="v35 ie ie7" onload="initCounter()">
@@ -77,7 +78,7 @@ $_SESSION[ 'csrf' ] = $key;
 
 <div id="content"  class="login">
 
-<h1><img class="img_login" src="img/x.gif" alt="log in the game" /></h1>
+<h1><img class="img_login" src="img/x.gif" alt="log in the game" /><span class="tz-img-text"><?php echo LOGIN; ?></span></h1>
 
 <?php
 $time = time();
@@ -88,7 +89,7 @@ echo '<p><font color="red" size="6">'.NOT_OPENED_YET.'</font></p>' ;
 else
 {
 ?>
-<h5><img class="img_u04" src="img/x.gif" alt="login" /></h5>
+<h5><img class="img_u04" src="img/x.gif" alt="login" /><span class="tz-img-text"><?php echo LOGIN; ?></span></h5>
 <p><?php echo COOKIES; ?></p>
 <?php
 $stime = strtotime( date( 'm/d/Y H:i', strtotime(START_DATE . ' ' . START_TIME ) ) );
@@ -207,7 +208,7 @@ Element.implement({
 
 <p class="btn">
 	<!--<input type="hidden" name="e1d9d0c" value="" />-->
-		<button value="login" name="s1"	onclick="xy();" id="btn_login" class="trav_buttons" alt="login button"	/> Login </button>
+		<button value="login" name="s1"	onclick="xy();" id="btn_login" class="trav_buttons" alt="login button"	/> <?php echo LOGIN; ?> </button>
 </p>
 
 </form>

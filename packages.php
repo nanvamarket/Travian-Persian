@@ -47,6 +47,7 @@ $id = $_GET['id'];
 	<script type="text/javascript">
 	window.addEvent('domready', start);
 	</script>
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'game'); ?>
 </head>
 
 

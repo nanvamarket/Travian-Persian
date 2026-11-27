@@ -1,0 +1,340 @@
+/* =====================================================================
+   Responsive layout for phones and tablets.
+   Loaded on every page by GameEngine/Lang/i18n_head.php, for every language.
+   Desktop (980px and wider) is left exactly as the classic layout.
+   ===================================================================== */
+
+/* -------------------------------------------------------------------
+   In-game pages (T3 layout: #dynamic_header, #header/#mtop, #mid with
+   #side_navi | #content | #side_info, #footer)
+   ------------------------------------------------------------------- */
+@media (max-width: 979px) {
+	html.tz-game body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+	html.tz-game .wrapper,
+	html.tz-game #dynamic_header,
+	html.tz-game #header,
+	html.tz-game #mid,
+	html.tz-game #ltime,
+	html.tz-game #res,
+	html.tz-game #footer {
+		min-width: 0 !important;
+		width: 100% !important;
+	}
+
+	/* Artwork strip on top: shorter on small screens. */
+	html.tz-game #dynamic_header {
+		height: 56px !important;
+		background-size: auto 100% !important;
+		background-position: center top !important;
+	}
+
+	/* Main round navigation buttons, hero, Plus and gold: centered and scaled. */
+	html.tz-game #header { height: auto !important; min-height: 72px; }
+	html.tz-game #mtop {
+		left: auto !important;
+		margin: 0 auto !important;
+		top: -4px !important;
+	}
+
+	/* Server time line: keep it small and above the buttons. */
+	html.tz-game #ltime { top: 58px !important; }
+	html.tz-game #ltimeWrap { width: auto !important; margin: 0 8px !important; }
+	html.tz-game #ltime { z-index: 3 !important; }
+
+	/* Resource bar: right under the buttons, centered. */
+	html.tz-game #res {
+		position: absolute !important;
+		top: 128px !important;
+		left: 0 !important;
+		height: auto !important;
+	}
+	html.tz-game #resWrap {
+		left: auto !important;
+		margin: 0 auto !important;
+		width: auto !important;
+		max-width: 100%;
+		text-align: center;
+	}
+	html.tz-game #mid { padding-top: 30px; }
+	html.tz-game #resWrap table { margin: 0 auto !important; }
+
+	/* Three columns become one: menu, content, side info. */
+	html.tz-game #mid {
+		float: none !important;
+		background-image: none !important;
+	}
+	html.tz-game #side_navi,
+	html.tz-game #content,
+	html.tz-game #side_info {
+		float: none !important;
+		left: auto !important;
+		width: auto !important;
+		max-width: 100%;
+		box-sizing: border-box;
+		min-height: 0 !important;
+	}
+
+	/* Left menu turns into one row of buttons that scrolls sideways. */
+	html.tz-game #side_navi {
+		display: flex !important;
+		flex-wrap: nowrap;
+		gap: 6px;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		padding: 6px 8px !important;
+		margin: 0 !important;
+		border-bottom: 1px solid #e2e2e2;
+	}
+	html.tz-game #side_navi::-webkit-scrollbar { display: none; }
+	html.tz-game #side_navi #logo { display: none !important; }
+	html.tz-game #side_navi p { display: contents; }
+	html.tz-game #side_navi p a {
+		display: inline-block !important;
+		padding: 4px 10px !important;
+		border: 1px solid #ccc;
+		border-radius: 14px;
+		background: #f7f7f7;
+		line-height: 20px !important;
+		white-space: nowrap;
+	}
+	html.tz-game #side_navi p br { display: none; }
+
+	/* Content: centered, keeps its own fixed-size inner graphics, and lets wide
+	   tables scroll sideways instead of breaking the page. */
+	html.tz-game #content {
+		margin: 0 auto !important;
+		padding: 0 6px !important;
+		min-height: 0 !important;
+		overflow-x: auto !important;
+		-webkit-overflow-scrolling: touch;
+		background-image: none !important;
+	}
+	html.tz-game #content > h1 { position: static !important; padding-top: 8px; }
+	/* Page wrappers inside #content (#build, report and message boxes...) are
+	   fixed at ~500px; let them use the screen width instead. Village maps
+	   keep their size (they are scaled with zoom below). */
+	html.tz-game #content > div:not(#village_map):not(#map_details):not(.map):not(#map) {
+		width: auto !important;
+		max-width: 100%;
+		box-sizing: border-box;
+	}
+	html.tz-game #content h1,
+	html.tz-game #content h2 { width: auto !important; }
+	html.tz-game #content table { max-width: 100%; }
+	html.tz-game #content table.new_building td { width: auto !important; }
+	html.tz-game #content.village1 #map_details { float: none !important; margin: 10px auto 0 !important; }
+	html.tz-game #content.village1 #village_map { float: none !important; margin: 0 auto !important; }
+
+	html.tz-game #side_info {
+		padding: 8px !important;
+		margin: 0 auto !important;
+	}
+	html.tz-game #side_info #qge img { max-width: 100%; height: auto !important; }
+
+	/* Footer back in the flow. */
+	html.tz-game #footer {
+		position: relative !important;
+		height: auto !important;
+		padding-bottom: 10px;
+	}
+	html.tz-game #footer { margin-top: 10px !important; }
+	html.tz-game #footer ul.menu { position: static !important; }
+	html.tz-game #mfoot {
+		height: auto !important;
+		text-align: center !important;
+		background-position: center 6px !important;
+		padding-top: 40px !important;
+	}
+	html.tz-game #mfoot .copyright { text-align: center !important; }
+	html.tz-game #mfoot, html.tz-game #mfoot .footer-menu {
+		width: auto !important;
+		max-width: 100%;
+		padding: 0 8px;
+		box-sizing: border-box;
+	}
+	html.tz-game .footer-stopper { display: none; }
+}
+
+/* Phones: scale the fixed-size game graphics to the screen. `zoom` keeps
+   clickable image maps and absolute children aligned with the picture. */
+@media (max-width: 719px) {
+	html.tz-game #mtop { zoom: 0.78; }
+}
+@media (max-width: 579px) {
+	html.tz-game #mtop { zoom: 0.56; }
+	html.tz-game #content.village2 #village_map { zoom: 0.68; margin: 0 auto; }
+	html.tz-game #content #map { zoom: 0.68; margin: 0 auto; }
+	html.tz-game #ltime { display: none; }
+}
+@media (max-width: 399px) {
+	html.tz-game #mtop { zoom: 0.52; }
+	html.tz-game #content.village2 #village_map { zoom: 0.64; }
+	html.tz-game #content #map { zoom: 0.64; }
+}
+
+/* -------------------------------------------------------------------
+   Login / register (in-game frame, logged out)
+   ------------------------------------------------------------------- */
+@media (max-width: 979px) {
+	html.tz-game #content.login,
+	html.tz-game #content.signup {
+		width: auto !important;
+		max-width: 560px;
+	}
+	html.tz-game #content.login input.text,
+	html.tz-game #content.signup input.text {
+		width: 100% !important;
+		max-width: 260px;
+		box-sizing: border-box;
+		font-size: 16px; /* no auto-zoom on iOS */
+		padding: 4px 6px;
+	}
+	html.tz-game #content.signup table,
+	html.tz-game #content.login table { width: 100% !important; }
+}
+
+/* -------------------------------------------------------------------
+   Landing page (index.php) and the public content pages
+   ------------------------------------------------------------------- */
+@media (max-width: 860px) {
+	html.tz-landing .wrapper { min-width: 0 !important; }
+
+	html.tz-landing #country_select { display: none; }
+
+	html.tz-landing #header {
+		position: relative !important;
+		height: 200px !important;
+		background-size: cover !important;
+		background-position: 40% 0 !important;
+	}
+	html.tz-landing body.contentpage #header,
+	html.tz-landing body.contentPage #header { height: 90px !important; }
+
+	html.tz-landing #navigation {
+		position: absolute !important;
+		left: 0 !important;
+		right: 0 !important;
+		top: 8px !important;
+		margin: 0 !important;
+		width: auto !important;
+		height: auto !important;
+		background: none !important;
+	}
+	html.tz-landing #navigation a.home { display: none; }
+	html.tz-landing #navigation table.menu {
+		position: static !important;
+		width: auto !important;
+		margin: 0 auto;
+		background: rgba(255, 255, 255, 0.85);
+		border-radius: 18px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	}
+	html.tz-landing #navigation .menu a { font-size: 13px; padding: 6px 4px !important; }
+	html.tz-landing #navigation .menu a span { padding: 6px 4px !important; }
+	html.tz-landing #navigation .menu a:hover,
+	html.tz-landing #navigation .menu a:hover span { background: none !important; }
+
+	html.tz-landing #register_now {
+		left: 50% !important;
+		margin-left: -80px !important;
+		top: 118px !important;
+		width: 160px !important;
+		background: rgba(255, 248, 225, 0.92);
+		border: 2px solid #a5804b;
+		border-radius: 10px;
+		padding: 2px 0 6px;
+		height: auto !important;
+	}
+	html.tz-landing #register_now a { margin-top: 2px !important; }
+	html.tz-landing #t4play { display: none; }
+
+	html.tz-landing body.indexPage #content,
+	html.tz-landing body.indexpage #content { padding-top: 0 !important; padding-bottom: 0 !important; }
+	html.tz-landing body.contentPage #content,
+	html.tz-landing body.contentpage #content { padding-top: 10px !important; padding-bottom: 0 !important; }
+
+	html.tz-landing #content .grit,
+	html.tz-landing body.indexPage #content .grit,
+	html.tz-landing body.contentPage #content .grit {
+		width: auto !important;
+		max-width: 520px;
+		margin: 0 auto;
+		padding: 0 10px;
+		background-image: none !important;
+	}
+	html.tz-landing .grit .infobox,
+	html.tz-landing .grit .secondarybox {
+		float: none !important;
+		width: auto !important;
+		margin: 12px 0 0 !important;
+		min-height: 0 !important;
+		background: #fff !important;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+		overflow: hidden;
+	}
+	html.tz-landing .grit .infobox div { padding-left: 16px !important; padding-right: 16px !important; }
+	html.tz-landing #player_counter { left: 0 !important; width: auto !important; }
+	html.tz-landing #player_counter table { left: auto !important; right: 16px; }
+	html.tz-landing .grit #screenshots {
+		width: auto !important;
+		background: #555 !important;
+		border-radius: 10px 10px 0 0;
+	}
+	html.tz-landing #screenshots .navi img { z-index: 2; }
+	html.tz-landing #newsbox h2 { background: #ececec !important; }
+	html.tz-landing #newsbox { background: none !important; }
+	html.tz-landing #screenshots_preview { left: 0; right: 0; width: auto !important; margin: 7px 44px !important; }
+	html.tz-landing #newsbox .news { width: auto !important; }
+
+	/* Text pages (rules, FAQ, imprint): drop the wide fixed margins. */
+	html.tz-landing body.contentPage #content .characteristics,
+	html.tz-landing body.contentPage #content p,
+	html.tz-landing body.contentPage #content table,
+	html.tz-landing body.contentPage form,
+	html.tz-landing body.contentPage .rules,
+	html.tz-landing body.contentPage #content h2,
+	html.tz-landing body.contentPage #content h3 {
+		margin-left: 8px !important;
+		margin-right: 8px !important;
+		max-width: 100%;
+	}
+	html.tz-landing body.contentPage h1 { padding-top: 10px !important; margin-bottom: 15px !important; }
+
+	html.tz-landing #footer {
+		position: relative !important;
+		height: auto !important;
+		padding: 12px 0;
+		margin-top: 16px;
+	}
+	html.tz-landing #footer .container { width: auto !important; }
+	html.tz-landing #footer .menu,
+	html.tz-landing #footer .copyright {
+		position: static !important;
+		text-align: center;
+		float: none;
+	}
+	html.tz-landing #footer .menu li { float: none !important; display: inline-block; }
+
+	/* "Choose a server" popup and screenshot viewer fit the screen. */
+	html.tz-landing .overlay_content {
+		right: auto !important;
+		left: 50% !important;
+		top: 80px !important;
+		transform: translateX(-50%);
+		max-width: 96vw;
+		margin: 0 !important;
+	}
+	html.tz-landing .overlay_content ul.world_list { padding: 0; }
+	html.tz-landing #screenshot_layer .overlay_content { width: 96vw !important; }
+	html.tz-landing .screenshot_view img { max-width: 100%; height: auto; }
+	html.tz-landing #iframe_layer .overlay_content { width: 96vw !important; }
+	html.tz-landing #iframe_layer iframe { width: 100% !important; }
+}
+
+/* Text replacements for headings drawn as English images (login/register).
+   Hidden by default; css/tz-rtl.css shows them instead of the image. */
+.tz-img-text { display: none; }

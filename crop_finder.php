@@ -189,6 +189,7 @@ if ($wrefs) {
 	echo " <link href='".GP_LOCATE."travian.css?e21d2' rel='stylesheet' type='text/css' />";
     echo " <link href='".GP_LOCATE."lang/en/lang.css?e21d2' rel='stylesheet' type='text/css' />"; ?>
 <script type="text/javascript">window.addEvent('domready', start);</script>
+<?php require_once __DIR__ . '/GameEngine/Lang/i18n_head.php'; tz_i18n_head('', 'game'); ?>
 </head>
 <body class="v35 ie ie8">
 <div class="wrapper">
