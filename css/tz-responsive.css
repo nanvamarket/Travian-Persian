@@ -338,3 +338,17 @@
 /* Text replacements for headings drawn as English images (login/register).
    Hidden by default; css/tz-rtl.css shows them instead of the image. */
 .tz-img-text { display: none; }
+
+/* -------------------------------------------------------------------
+   Landing header artwork: the Persian server's own image
+   (upload it to gpack/travian/images/artwork-ltr.webp).
+   Phones and tablets crop it with the rules above (background-size: cover).
+   ------------------------------------------------------------------- */
+html.tz-landing body.indexPage #header,
+html.tz-landing body.indexpage #header {
+	background-image: url("../gpack/travian/images/artwork-ltr.webp");
+}
+@media (min-width: 861px) {
+	html.tz-landing body.indexPage #header,
+	html.tz-landing body.indexpage #header { background-size: auto 389px; }
+}
