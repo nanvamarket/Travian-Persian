@@ -352,3 +352,11 @@ html.tz-landing body.indexpage #header {
 	html.tz-landing body.indexPage #header,
 	html.tz-landing body.indexpage #header { background-size: auto 389px; }
 }
+
+/* Persian server's own artwork for the landing boxes (uploaded as .webp). */
+html.tz-landing #player_counter {
+	background-image: url("../gpack/travian/images/count_background-ltr.webp");
+}
+html.tz-landing .grit #screenshots {
+	background-image: url("../gpack/travian/images/screenshots_background.webp");
+}
